@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studying Up and Sideways, a CSCW 2026 SIG</title>
+<meta name="description" content="A CSCW 2026 Special Interest Group on studying the actors, infrastructures, and political-economic arrangements that produce extractive digital labor conditions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --white:#ffffff;
+  --black:#000000;
+  --red:#e30613;
+  --red-wash:#fdecee;   /* text selection and focus halo only */
+  --measure:40rem;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--white); color:var(--black);
+  font-family:"Archivo",system-ui,sans-serif; font-stretch:100%;
+  font-size:1.125rem; line-height:1.55; font-weight:400;
+}
+::selection{background:var(--red-wash)}
+a{color:var(--red); text-decoration-thickness:1px; text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--red); outline-offset:3px}
+p{margin:0 0 1em}
+
+.page{max-width:72rem; margin:0 auto; padding:0 1.5rem}
+.col{max-width:var(--measure)}
+
+/* top bar */
+.bar{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:.5rem 1.5rem; padding:1.25rem 0}
+.bar .where{font-weight:500}
+.bar nav{display:flex; flex-wrap:wrap; gap:.25rem 1.25rem; font-size:1rem}
+.bar nav a{color:var(--black); text-decoration:none}
+.bar nav a:hover{color:var(--red)}
+
+/* the title: arrows show the two directions */
+.title{
+  margin:4rem 0 2rem; font-weight:800; line-height:.95; letter-spacing:-.02em;
+  font-size:clamp(2.9rem, 9vw, 7.5rem);
+}
+.title .dir{color:var(--red); font-weight:600; margin-left:.08em}
+
+.lede{font-size:clamp(1.3rem,2.4vw,1.7rem); line-height:1.3; max-width:36rem; margin-bottom:1.5rem}
+.when{max-width:36rem; font-size:1.2rem; line-height:1.45}
+.when strong{color:var(--red); font-weight:700}
+
+/* sections */
+section{padding:4.5rem 0 0}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem); font-weight:700; font-stretch:87%; line-height:1.1; margin:0 0 1.25rem; letter-spacing:-.01em}
+h3{font-size:1.15rem; font-weight:700; margin:0 0 .35rem}
+
+/* organizer emails */
+.emails-box summary{display:inline-block; cursor:pointer; list-style:none; background:var(--red); color:var(--white); font-weight:600; padding:.7rem 1.15rem; border-radius:3px; margin-top:.25rem}
+.emails-box summary::-webkit-details-marker{display:none}
+.emails-box summary:hover{background:var(--black)}
+.emails-box[open] summary{margin-bottom:.75rem}
+.emails{display:block; width:100%; max-width:var(--measure); font:inherit; font-size:1rem; line-height:1.5; color:var(--black); background:var(--white); border:1.5px solid var(--black); border-radius:3px; padding:.7rem .85rem; resize:none; field-sizing:content}
+.emails:focus{outline:none; border-color:var(--red)}
+
+/* questions */
+.questions{margin:0 0 1em; padding-left:1.2rem}
+.questions li{margin-bottom:.75rem; padding-left:.3rem}
+.questions li::marker{color:var(--red)}
+
+/* schedule */
+table{border-collapse:collapse; width:100%; max-width:46rem}
+td{padding:.85rem 0; vertical-align:top; border-top:1px solid var(--black)}
+tr:last-child td{border-bottom:1px solid var(--black)}
+td.t{width:7rem; font-variant-numeric:tabular-nums; font-weight:600; color:var(--red); white-space:nowrap; padding-right:1rem}
+.after{margin-top:1rem}
+
+/* organizers */
+.people{list-style:none; padding:0; margin:1.5rem 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(19rem,1fr)); gap:1.75rem 3rem}
+.people b{display:block; font-size:1.15rem}
+.people .aff{display:block}
+.people .work{display:block; margin-top:.35rem}
+
+.suggest{margin-top:2rem; max-width:var(--measure)}
+.button{
+  display:inline-block; background:var(--red); color:var(--white); text-decoration:none;
+  font-weight:600; padding:.7rem 1.15rem; border-radius:3px;
+}
+.button:hover{background:var(--black); color:var(--white)}
+
+footer{margin-top:6rem; padding:1.5rem 0 3rem; border-top:1px solid var(--black); font-size:.95rem}
+footer .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(18rem,1fr)); gap:1rem 3rem}
+
+@media (max-width:640px){
+  body{font-size:1.0625rem}
+  .title{margin-top:3rem}
+  td.t{width:6.5rem}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="bar">
+    <span class="where">CSCW 2026 Special Interest Group</span>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#session">Session</a>
+      <a href="#organizers">Organizers</a>
+      <a href="#reading">Reading list</a>
+    </nav>
+  </div>
+
+  <h1 class="title">Studying Up<span class="dir" aria-hidden="true">↑</span><br>and Sideways<span class="dir" aria-hidden="true">→</span></h1>
+  <p class="lede">Situating Workers within Broader Labor Ecosystems</p>
+  <p class="when"><strong>Tuesday, October 13, 2:30–4:00 PM (local time)</strong><br>Salon A–C, CSCW 2026, Salt Lake City</p>
+</header>
+
+<main>
+<section id="about">
+  <h2>About this SIG</h2>
+  <div class="col">
+    <p>CSCW has built a rich body of work on how workers experience, navigate, and resist extractive labor conditions. This SIG asks a companion question: who produces those conditions, and how might we study them?</p>
+    <p>We'll gather to think through questions like these:</p>
+    <ul class="questions">
+      <li>What would it take to study platforms, investors, consultants, legal actors, and state agencies with the same empirical and ethnographic rigor we bring to workers?</li>
+      <li>How do we study power when key decisions sit behind NDAs, trade secrets, and closed doors, and when ethics boards are wary of corporate pushback?</li>
+      <li>How do different conceptions of “the worker” lead us to different diagnoses of power and different possibilities for intervention?</li>
+      <li>What does it mean to pursue this work from within universities increasingly funded by the very technology firms we scrutinize?</li>
+    </ul>
+  </div>
+</section>
+
+<section id="session">
+  <h2>How the session will run</h2>
+  <p class="col">The session is designed for conversation: a short framing, small-group discussions, and a collective look at where this agenda could go next. Our hope is to connect people working across digital labor, political economy, platform studies, critical data studies, and allied areas, and to seed a community that continues beyond the conference.</p>
+  <table>
+    <tbody>
+      <tr><td class="t">2:30–2:45</td><td>Welcome and framing from the organizers.</td></tr>
+      <tr><td class="t">2:45–3:15</td><td>Small-group discussions on methods, conceptions of the worker, and positionality and ethics.</td></tr>
+      <tr><td class="t">3:15–3:45</td><td>Groups report back, followed by collective reflection across themes.</td></tr>
+      <tr><td class="t">3:45–4:00</td><td>Synthesis and where this agenda could go next.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="organizers">
+  <h2>Organizers</h2>
+  <ul class="people">
+    <li><b>Inha Cha</b><span class="aff">PhD student, Georgia Institute of Technology</span><span class="work">Studies when, why, and how AI is adopted, refused, or deliberated in organizations, and how worker agency forms there.</span><a href="mailto:icha9@gatech.edu">icha9@gatech.edu</a></li>
+    <li><b>Ashique Ali Thuppilikkat</b><span class="aff">PhD candidate, University of Toronto</span><span class="work">Studies technology in worker resistance and unionization amid the platformization of urban life.</span><a href="mailto:ashique.thuppilikkat@mail.utoronto.ca">ashique.thuppilikkat@mail.utoronto.ca</a></li>
+    <li><b>Yigang Qin</b><span class="aff">PhD student, Syracuse University</span><span class="work">Studies how political-economic and cultural conditions shape digital technologies in production and social reproduction.</span><a href="mailto:yqin27@syr.edu">yqin27@syr.edu</a></li>
+    <li><b>Richmond Y. Wong</b><span class="aff">Assistant Professor, Georgia Institute of Technology</span><span class="work">Studies how social and organizational environments support tech workers' ethical decision-making.</span><a href="mailto:rwong34@gatech.edu">rwong34@gatech.edu</a></li>
+    <li><b>Priyank Chandra</b><span class="aff">Assistant Professor, University of Toronto, and director of STREET Lab</span><span class="work">Studies resistance practices at the margins and how technologies mediate them, with a focus on social movements and worker resistance.</span><a href="mailto:priyank.chandra@utoronto.ca">priyank.chandra@utoronto.ca</a></li>
+    <li><b>EunJeong Cheon</b><span class="aff">Assistant Professor, Syracuse University</span><span class="work">Ethnographic research on how robots and AI reshape labor, and the actors and institutions that bring them into work.</span><a href="mailto:echeon@syr.edu">echeon@syr.edu</a></li>
+  </ul>
+</section>
+
+<section id="reading">
+  <h2>Reading list</h2>
+  <div class="col">
+    <p>We keep a shared bibliography on studying up and sideways, from labour studies, HCI and CSCW, and anthropology and sociology, in Zotero.</p>
+    <p><a class="button" href="https://www.zotero.org/groups/6710208/studyingup-sideways-tech-labour-power" target="_blank" rel="noopener">Open the reading list in Zotero</a></p>
+  </div>
+  <div class="suggest">
+    <h3>Suggest a reading</h3>
+    <p>Add it to our shared Google Doc. The organizers review suggestions and add them to the Zotero library.</p>
+    <p><a class="button" href="https://docs.google.com/document/d/16lAomo8MZV5xD1NDCRyv76Ft75IP-EgZA6L-7x9MtDM/edit?usp=sharing" target="_blank" rel="noopener">Suggest a reading</a></p>
+  </div>
+</section>
+
+<section id="join">
+  <h2>All are welcome</h2>
+  <div class="col">
+    <p>Whether you study workers, study up, or are simply curious about where labor research in CSCW is heading, please join us. If you can't make it to Salt Lake City, write to us to stay in touch.</p>
+    <details class="emails-box">
+      <summary>Organizers' emails</summary>
+      <textarea id="emails" class="emails" readonly rows="3" onclick="this.select()">icha9@gatech.edu, ashique.thuppilikkat@mail.utoronto.ca, yqin27@syr.edu, rwong34@gatech.edu, priyank.chandra@utoronto.ca, echeon@syr.edu</textarea>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="cols">
+    <p>Inha Cha, Ashique Ali Thuppilikkat, Yigang Qin, Richmond Y. Wong, Priyank Chandra, and Eunjeong Cheon. 2026. Studying Up and Sideways: Situating Workers within Broader Labor Ecosystems. In <i>Companion of the Computer-Supported Cooperative Work and Social Computing (CSCW Companion ’26), October 10–14, 2026, Salt Lake City, UT, USA</i>. ACM, New York, NY, USA, 6 pages. <a href="https://doi.org/10.1145/3785651.3831579">https://doi.org/10.1145/3785651.3831579</a></p>
+    <p>Supported in part by the Atlanta Interdisciplinary AI Network, the Georgia Tech Brook Byers Institute for Sustainable Systems, and NSERC (RGPIN-2022-04096).</p>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
